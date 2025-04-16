@@ -1,0 +1,32 @@
+# config/config.py
+
+# Базовый URL для API банка Точка
+BASE_URL = "https://enter.tochka.com/uapi/open-banking/v1.0/balances"
+
+# Токен доступа к API банка Точка
+API_TOKEN = "your_api_token_here"
+
+# Токен Telegram-бота
+TELEGRAM_BOT_TOKEN = "your_telegram_bot_token_here"
+
+# Словарь с названиями счетов
+ACCOUNT_NAMES = {
+    "40701810101500000123/044512304": "Основной счет",
+    "40701810502500000124/044512304": "Накопительный счет",
+    "40701810902500000125/044512304": "Фирма 1",
+    "40701810902500001126/044512304": "Фирма 2"
+}
+
+# Словарь с понятными названиями типов балансов
+BALANCE_TYPES = {
+    "OpeningAvailable": "Начальный остаток",
+    "ClosingAvailable": "Доступный баланс",
+    "Expected": "Заблокированные средства",
+    "OverdraftAvailable": "Доступный лимит по овердрафту"
+}
+
+# Заголовки для HTTP-запросов
+HEADERS = {
+    'Authorization': f'Bearer {API_TOKEN}',
+    'Content-Type': 'application/json',
+}
