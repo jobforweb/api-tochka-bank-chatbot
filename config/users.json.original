@@ -1,0 +1,11 @@
+{
+  "users": {
+    "123456789": "admin",
+    "987654321": "user"
+  },
+  "roles": {
+    "admin": ["start", "help", "balance", "add_user", "remove_user", "change_role", "list_users"],
+    "user": ["start", "help", "balance"],
+    "guest": ["start", "help"]
+  }
+}
